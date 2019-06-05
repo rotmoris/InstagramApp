@@ -48,8 +48,6 @@ class ActivityView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        var x = "me"
-        x = x + "me"
         
         return CGFloat(80.0)
         
