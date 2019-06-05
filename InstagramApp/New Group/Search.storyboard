@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KQ2-Ce-JhE">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="DZ8-X6-zdV">
+            <objects>
+                <viewController storyboardIdentifier="Search" id="KQ2-Ce-JhE" customClass="SearchViewController" customModule="InstagramApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CuP-7S-F7C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dfE-Pl-AI6">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewLayout key="collectionViewLayout" id="EZt-FT-eWx" customClass="CollectionViewLayout" customModule="InstagramApp" customModuleProvider="target"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ExploreCollectionViewCell" id="8CA-Ip-iC5" customClass="ExploreCollectionViewCell" customModule="InstagramApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dy1-MZ-QWv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="144" height="140"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Dy1-MZ-QWv" secondAttribute="trailing" id="0wQ-KV-Sy8"/>
+                                            <constraint firstItem="Dy1-MZ-QWv" firstAttribute="leading" secondItem="8CA-Ip-iC5" secondAttribute="leading" id="Kz9-1s-bDF"/>
+                                            <constraint firstItem="Dy1-MZ-QWv" firstAttribute="top" secondItem="8CA-Ip-iC5" secondAttribute="top" id="TRi-XP-E9M"/>
+                                            <constraint firstAttribute="bottom" secondItem="Dy1-MZ-QWv" secondAttribute="bottom" id="VxB-iC-mrI"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="exploreImage" destination="Dy1-MZ-QWv" id="Hcz-rV-jod"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dfE-Pl-AI6" firstAttribute="top" secondItem="2zv-tx-Uh4" secondAttribute="top" id="8pk-un-Xk8"/>
+                            <constraint firstItem="dfE-Pl-AI6" firstAttribute="leading" secondItem="2zv-tx-Uh4" secondAttribute="leading" id="OWo-yc-PuM"/>
+                            <constraint firstItem="2zv-tx-Uh4" firstAttribute="bottom" secondItem="dfE-Pl-AI6" secondAttribute="bottom" id="UkJ-GT-n11"/>
+                            <constraint firstItem="2zv-tx-Uh4" firstAttribute="trailing" secondItem="dfE-Pl-AI6" secondAttribute="trailing" id="o5F-Ws-T9l"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2zv-tx-Uh4"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="dfE-Pl-AI6" id="OIM-gk-V3j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r3S-st-gN1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="92" y="125.4872563718141"/>
+        </scene>
+    </scenes>
+</document>
